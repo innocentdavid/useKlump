@@ -30,25 +30,25 @@ export default function Home() {
       <Nav user={user} logout={logout} />
       {/* Nav end */}
 
-      <div class="hero-section bg-primary"><div class="container text-white"><div class="flex flex-wrap items-center justify-between lg:pb-12">
-        <div class="flex flex-col space-y-8 w-full lg:w-2/5 order-2 lg:order-1">
-          <h2 class="xl:text-[3.2rem] lg:text-[2.5rem] text-3xl font-bold leading-[45px] lg:leading-[65px] xl:leading-[80px]">
+      <div className="hero-section bg-primary"><div className="container text-white"><div className="flex flex-wrap items-center justify-between lg:pb-12">
+        <div className="flex flex-col space-y-8 w-full lg:w-2/5 order-2 lg:order-1">
+          <h2 className="xl:text-[3.2rem] lg:text-[2.5rem] text-3xl font-bold leading-[45px] lg:leading-[65px] xl:leading-[80px]">
             Flexible Payment Plans for Everyone
           </h2>
-          <p class="text-md leading-[28px] lg:leading-[40px]">
+          <p className="text-md leading-[28px] lg:leading-[40px]">
             Klump helps you buy anything you need on a payment plan that works for you. You work hard, You deserve the Easy Life. Buy Now Pay Later with Klump!
           </p>
 
           <div>
-            <Link href="https://merchant.useklump.com/sign-up"><a class="inline-flex cursor-pointer justify-center items-center whitespace-nowrap focus:outline-none transition-colors focus:ring duration-150 border font-semibold ring-blue-700 p-4 bg-white text-black border-gray-300 hover:bg-transparent hover:text-white">
-              <span class="px-2">Create an account in 10 minutes</span>
-              <span class="inline-flex justify-center items-center w-6 h-6">
-                <svg viewBox="0 0 24 24" width="16" height="16" class="inline-block"><path fill="currentColor" d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z"></path></svg>
+            <Link href="https://merchant.useklump.com/sign-up"><a className="inline-flex cursor-pointer justify-center items-center whitespace-nowrap focus:outline-none transition-colors focus:ring duration-150 border font-semibold ring-blue-700 p-4 bg-white text-black border-gray-300 hover:bg-transparent hover:text-white">
+              <span className="px-2">Create an account in 10 minutes</span>
+              <span className="inline-flex justify-center items-center w-6 h-6">
+                <svg viewBox="0 0 24 24" width="16" height="16" className="inline-block"><path fill="currentColor" d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z"></path></svg>
               </span>
             </a></Link>
           </div>
 
-          <div class="flex flex-wrap items-center space-x-4 lg:space-x-8">
+          <div className="flex flex-wrap items-center space-x-4 lg:space-x-8">
             <span><img src="/images/icons/flutterwave.png" alt="flutterwave icon" /></span>
             <span className="mt-3 md:mt-0 -ml-2 md:ml-0"><img src="/images/icons/mono.svg" alt="mono icon" /></span>
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
           <div className="m-5 md:m-0"></div>
         </div>
 
-        <div class="w-full lg:w-3/6 order-1 lg:order-2 mb-5">
+        <div className="w-full lg:w-3/6 order-1 lg:order-2 mb-5">
           <img src="/images/landing.png" alt="klump banner" width="672" height="662" />
         </div>
       </div>
@@ -68,56 +68,56 @@ export default function Home() {
 
 
 
-    <section class="bg-neutral-200">
-      <div class="container">
-        <div class="lg:text-center text-left">
-          <h2 class="font-bold mb-3 text-2xl md:text-3xl">
+    <section className="bg-neutral-200">
+      <div className="container">
+        <div className="lg:text-center text-left">
+          <h2 className="font-bold mb-3 text-2xl md:text-3xl">
             Pay Your Way
           </h2>
           <p>Discover new ways to pay at your convenience on the Klump Buy Now Pay Later plan.</p>
         </div>
 
-        <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:gap-8 mt-5 lg:mt-12">
-          <div class="flex">
-            <div class="min-w-[70px] h-[70px] rounded-[4.86px] flex items-center justify-center mr-3" style={{ backgroundColor: 'rgba(104, 201, 133, 0.1)' }}>
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:gap-8 mt-5 lg:mt-12">
+          <div className="flex">
+            <div className="min-w-[70px] h-[70px] rounded-[4.86px] flex items-center justify-center mr-3" style={{ backgroundColor: 'rgba(104, 201, 133, 0.1)' }}>
               <img src="/images/icons/pay.svg" alt="icon" />
             </div>
 
             <div>
-              <h3 class="text-lg font-bold">
+              <h3 className="text-lg font-bold">
                 Pay how you like
               </h3>
-              <p class="text-sm mt-1">
+              <p className="text-sm mt-1">
                 Enjoy the freedom to choose how you want to pay for purchases
               </p>
             </div>
           </div>
 
-          <div class="flex">
-            <div class="min-w-[70px] h-[70px] rounded-[4.86px] flex items-center justify-center mr-3" style={{ backgroundColor: 'rgba(211, 118, 106, 0.1)' }}>
+          <div className="flex">
+            <div className="min-w-[70px] h-[70px] rounded-[4.86px] flex items-center justify-center mr-3" style={{ backgroundColor: 'rgba(211, 118, 106, 0.1)' }}>
               <img src="/images/icons/installment.svg" alt="icon" />
             </div>
 
             <div>
-              <h3 class="text-lg font-bold">
+              <h3 className="text-lg font-bold">
                 Instalment over 3 months
               </h3>
-              <p class="text-sm mt-1">
+              <p className="text-sm mt-1">
                 Spread payments over 1 to 3 months after an initial 25% deposit
               </p>
             </div>
           </div>
 
-          <div class="flex">
-            <div class="min-w-[70px] h-[70px] rounded-[4.86px] flex items-center justify-center mr-3" style={{ backgroundColor: 'rgba(44, 134, 255, 0.1)' }}>
+          <div className="flex">
+            <div className="min-w-[70px] h-[70px] rounded-[4.86px] flex items-center justify-center mr-3" style={{ backgroundColor: 'rgba(44, 134, 255, 0.1)' }}>
               <img src="/images/icons/budget.svg" alt="icon" />
             </div>
 
             <div>
-              <h3 class="text-lg font-bold">
+              <h3 className="text-lg font-bold">
                 Manage Your Budget
               </h3>
-              <p class="text-sm mt-1">
+              <p className="text-sm mt-1">
                 Manage your finances better paying in smaller chunks every month
               </p>
             </div>
