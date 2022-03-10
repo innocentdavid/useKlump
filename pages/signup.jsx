@@ -249,7 +249,9 @@ const Signup = () => {
             </form>
           </div>
 
-          <center className="m-5">Already have an account? <a href='/signup'>Login here</a></center>
+          <center className="m-5">Already have an account? 
+          <Link href='/login'><a>Login here</a></Link>
+          </center>
 
         </section>
       </div>

@@ -62,6 +62,7 @@ const Login = () => {
               
               <div><div className="form-group"><div className="flex justify-between"><label htmlFor="password" className="font-weight-bold block mb-1" style={{ fontSize: 16 }}>Password</label>
               <Link href="#forgot-password"><a className="text-light-blue font-weight-bold" id="forgetPassword">Forgot password</a></Link></div><div className="position-relative">
+
                 {/* <svg width={16} height={12} viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg" className="position-absolute cursor-pointer" style={{ top: 20, right: 12 }} fill="none"><path d="M8.14293 7.38351C8.93191 7.38351 9.5715 6.74392 9.5715 5.95494C9.5715 5.16596 8.93191 4.52637 8.14293 4.52637C7.35395 4.52637 6.71436 5.16596 6.71436 5.95494C6.71436 6.74392 7.35395 7.38351 8.14293 7.38351Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" /><path d="M15.2857 5.95508C13.3807 9.28865 11 10.9551 8.14286 10.9551C5.28571 10.9551 2.905 9.28865 1 5.95508C2.905 2.62151 5.28571 0.955078 8.14286 0.955078C11 0.955078 13.3807 2.62151 15.2857 5.95508Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" /></svg> */}
 
                 <input
@@ -87,7 +88,9 @@ const Login = () => {
             </form>
           </div>
 
-          <center className="m-5">Don't have an account yet? <a href='/signup'>Click here</a></center>
+          <center className="m-5">Dont have an account yet?
+          <Link href='/signup'><a>Click here</a></Link>
+          </center>
 
         </section>
       </div>

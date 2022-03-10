@@ -199,7 +199,7 @@ export default function Home() {
 
 
     <section className="bg-secondary"><div className="container"><h2 className="font-bold mb-3 text-2xl md:text-3xl text-white text-left lg:text-center">
-      Here's what you might pay
+      Here is what you might pay
     </h2> <div className="bg-white p-[44px] rounded-[9.71154px] mt-[40px]"><div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24"><div className="w-full flex flex-col space-y-12 justify-between lg:col-span-2"><div><div className="flex justify-between"><h3 className="font-bold text-lg">
       Your purchase
     </h3> <div className="font-bold text-lg inline-flex items-center"><span><span>
