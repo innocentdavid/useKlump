@@ -58,7 +58,11 @@ export const AuthContextProvider = ({
 
   const logout = async () => {
     setUser(null)
-    await signOut(auth)
+    let msg = 'success';
+    await signOut(auth).catch(e => {
+      msg = e.message
+    });
+    return msg
   }
 
   return (

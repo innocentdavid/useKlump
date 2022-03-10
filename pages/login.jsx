@@ -16,7 +16,7 @@ const Login = () => {
     console.log(user)
     try {
       await login(data.email, data.password)
-      router.push('/dashboard')
+      router.push('/')
     } catch (err) {
       console.log(err)
     }
@@ -71,8 +71,13 @@ const Login = () => {
                   required
                 />
 
-              </div></div></div><div data-v-3daef832><div data-v-3daef832 id="signIn" className="form-group">
-                <button data-v-3daef832 className="bg-black mt-3 py-3 disabled:cursor-default w-full text-white rounded" disabled="disabled" style={{ outline: 'none' }}>Sign in</button></div></div>
+              </div></div></div><div data-v-3daef832>
+                <div data-v-3daef832 id="signIn" className="form-group">
+                  <button type="submit" data-v-3daef832 className="bg-black cursor-pointer mt-3 py-3 disabled:cursor-default w-full text-white rounded" style={{ outline: 'none' }}>Sign in</button>
+                  {/* <button type="submit">
+                    Login
+                  </button> */}
+                </div></div>
             </form>
           </div>
 

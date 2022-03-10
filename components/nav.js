@@ -1,30 +1,42 @@
 import React, { useEffect, useState } from 'react';
 
-export default function Nav() {
+export default function Nav({ user, logout }) {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-      const onScroll = () => setOffset(window.pageYOffset);
-      // clean up code
-      window.removeEventListener('scroll', onScroll);
-      window.addEventListener('scroll', onScroll, { passive: true });
-      return () => window.removeEventListener('scroll', onScroll);
+    const onScroll = () => setOffset(window.pageYOffset);
+    // clean up code
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   let element = document.querySelector('.has-hero-section');
   let menuItems = document.querySelector('.menuItems');
-  if(element){
-    if(offset >= 3){
+  if (element) {
+    if (offset >= 3) {
       element?.classList.remove("bg-transparent");
       element?.classList.add("sticky", "pb-2");
       menuItems?.classList.add("stickyMenuItems");
-    }else{
+    } else {
       element?.classList.remove("sticky", "pb-2");
       element?.classList.add("bg-transparent");
       menuItems?.classList.remove("stickyMenuItems");
     }
   }
-  
+
+  const handleLogout = async (e) => {
+    e.preventDefault()
+
+    console.log(user)
+    try {
+      await logout();
+      router.push('/')
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
 
   return (
     <div class="z-40 w-full flex items-center top-0 left-0 bg-transparent has-hero-section absolute">
@@ -96,8 +108,10 @@ export default function Nav() {
             </div>
 
             <div class="sm:flex justify-end hidden pr-16 lg:pr-0">
-              <a href="/login" class="font-medium py-[15px] px-6 text-white hover:opacity-70">Login</a>
-              <a href="/signup" class="font-bold rounded-[3px] py-[15px] px-5 duration-300 ease-in-out text-primary bg-white hover:text-white hover:border hover:border-white hover:bg-transparent border border-transparent">Create an account</a>
+              {user ? <a href="/logout" class="font-medium py-[15px] px-6 text-white hover:opacity-70" onClick={(e) => { handleLogout(e) }}>Logout</a> : <>
+                <a href="/login" class="font-medium py-[15px] px-6 text-white hover:opacity-70">Login</a>
+                <a href="/signup" class="font-bold rounded-[3px] py-[15px] px-5 duration-300 ease-in-out text-primary bg-white hover:text-white hover:border hover:border-white hover:bg-transparent border border-transparent">Create an account</a></>
+              }
             </div>
           </div>
         </div>

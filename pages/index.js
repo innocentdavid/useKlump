@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
   return (<>
     <Head>
@@ -27,7 +27,7 @@ export default function Home() {
 
     <div>
       {/* Nav start */}
-      <Nav />
+      <Nav user={user} logout={logout} />
       {/* Nav end */}
 
       <div class="hero-section bg-primary"><div class="container text-white"><div class="flex flex-wrap items-center justify-between lg:pb-12">
